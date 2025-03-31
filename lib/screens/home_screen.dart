@@ -98,11 +98,11 @@ class HomeScreenState extends State<HomeScreen> {
           ),
           const SizedBox(height: 35),
           const ListTile(
-            title: Text(Strings.emailAddress),
+            title: Text(Strings.weather),
           ),
           ListTile(
-            onTap: () => _lunchUrl(Strings.gitHub),
-            title: const Text(Strings.opt2),
+            onTap: () => _lunchUrl(Strings.gitHubLink),
+            title: const Text(Strings.opt1),
           ),
           ListTile(
             onTap: () => _lunchUrl(Strings.apiWebsite),
@@ -201,7 +201,7 @@ class HomeScreenState extends State<HomeScreen> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
-          height: size.height / 5,
+          height: size.height / 6,
           child: LottieBuilder.asset(_getWeatherAnimation()),
         ),
         Row(
