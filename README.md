@@ -1,16 +1,14 @@
-# weather_app
+# weather app
 
-A new Flutter project.
 
-## Getting Started
+<img src="https://github.com/user-attachments/assets/7b863472-5c56-4ec1-9a96-7bfb0812b146" width="140" heigt="200"></img>
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+used packages :
+- Dio https://github.com/cfug/dio
+- flutter-geolocator https://github.com/Baseflow/flutter-geolocator
+- flutter-lottie https://github.com/xvrh/lottie-flutter
+- url_launcher https://github.com/flutter/packages/tree/main/packages/url_launcher/url_launcher
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
