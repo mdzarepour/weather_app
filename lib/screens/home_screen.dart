@@ -101,11 +101,11 @@ class HomeScreenState extends State<HomeScreen> {
             title: Text(Strings.weather),
           ),
           ListTile(
-            onTap: () => _lunchUrl(Strings.gitHubLink),
+            onTap: () => _launchUrl(Strings.gitHubLink),
             title: const Text(Strings.opt1),
           ),
           ListTile(
-            onTap: () => _lunchUrl(Strings.apiWebsite),
+            onTap: () => _launchUrl(Strings.apiWebsite),
             title: const Text(Strings.opt2),
           ),
         ],
@@ -315,7 +315,7 @@ class HomeScreenState extends State<HomeScreen> {
   }
 
 // url luncher for drawer menu
-  void _lunchUrl(String url) async {
+  void _launchUrl(String url) async {
     Uri uri = Uri.parse(url);
     try {
       if (await canLaunchUrl(uri)) {
