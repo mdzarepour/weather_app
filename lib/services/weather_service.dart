@@ -1,7 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:weather_app/model/weather.dart';
+import 'package:weather_app/components/constants/strings.dart';
+import 'package:weather_app/models/weather.dart';
 
 class WeatherService {
   String apiKey = '7c75856312984912037d8c4ea863d7ef';
@@ -13,7 +14,7 @@ class WeatherService {
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
-        Future.error('we dont have permistoin to acces to location');
+        Future.error(Strings.permissionError);
       }
     }
     //get user position
@@ -32,8 +33,8 @@ class WeatherService {
 
   Future<Weather> getWeatherData(String city) async {
     late Weather weather;
-    Response response = await Dio().get(
-        'https://api.openweathermap.org/data/2.5/weather?q=$city&appid=$apiKey&units=metric');
+    Response response = await Dio()
+        .get('$baseUrl/2.5/weather?q=$city&appid=$apiKey&units=metric');
     if (response.statusCode == 200) {
       weather = Weather.fromJson(response.data);
     }

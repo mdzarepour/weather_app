@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/components/constants/colors.dart';
-import 'package:weather_app/screen/splash_screen.dart';
+import 'package:weather_app/screens/splash_screen.dart';
 
 main() {
   runApp(const WeatherApp());
@@ -22,6 +22,7 @@ class WeatherApp extends StatelessWidget {
     );
   }
 
+// drawer Listtile themes =>
   ListTileThemeData listTileTheme() {
     return const ListTileThemeData(
         titleTextStyle: TextStyle(
@@ -31,6 +32,7 @@ class WeatherApp extends StatelessWidget {
     ));
   }
 
+// seach textField theme =>
   InputDecorationTheme textFieldDecoration() {
     return const InputDecorationTheme(
         contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
@@ -46,6 +48,7 @@ class WeatherApp extends StatelessWidget {
         ));
   }
 
+  // appBar theme =>
   AppBarTheme _appBarTheme() {
     return const AppBarTheme(
       backgroundColor: Colors.transparent,
@@ -56,6 +59,7 @@ class WeatherApp extends StatelessWidget {
     );
   }
 
+// textThemes =>
   TextTheme textThemes() {
     return const TextTheme(
         //city and country name textTheme

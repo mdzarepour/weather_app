@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:lottie/lottie.dart';
 import 'package:weather_app/components/constants/colors.dart';
-import 'package:weather_app/screen/home_screen.dart';
-import 'package:weather_app/service/weather_service.dart';
+import 'package:weather_app/components/constants/strings.dart';
+import 'package:weather_app/screens/home_screen.dart';
+import 'package:weather_app/services/weather_service.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -37,7 +38,7 @@ class SplashScreenState extends State<SplashScreen> {
                   width: 200,
                   height: 200,
                   child: LottieBuilder.asset(
-                    'assets/images/splash_animation.json',
+                    Strings.animationAssetSplash,
                   ),
                 ),
                 const SpinKitThreeBounce(
